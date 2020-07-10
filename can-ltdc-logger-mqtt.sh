@@ -8,8 +8,8 @@ IFS=";"
 can-ltdc-logger | while read  timestamp program name value extra; do
 	echo Read: $timestamp $program $name $value $extra
 	if [ "$program" == "DLG_RELAY" ]; then
-		mosquitto_pub -u $MQTT_USER -P $MQTT_USER -h $MQTT_SERVER -m "$extra"  -t "ltdc/$program/$name/$value" -q 1 -r
+		mosquitto_pub -u $MQTT_USER -P $MQTT_PASSWORD -h $MQTT_SERVER -m "$extra"  -t "ltdc/$program/$name/$value" -q 1 -r
 	else
-		mosquitto_pub -u $MQTT_USER -P $MQTT_USER -h $MQTT_SERVER -m "$value"  -t "ltdc/$program/$name" -q 1 -r
+		mosquitto_pub -u $MQTT_USER -P $MQTT_PASSWORD -h $MQTT_SERVER -m "$value"  -t "ltdc/$program/$name" -q 1 -r
 	fi
 done
