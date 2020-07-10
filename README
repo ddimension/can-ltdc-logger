@@ -4,6 +4,6 @@ This tool allows monitoring several values from th following device:
 
 Other devices may work as well.
 
-CAN addressies are taken from SOREL CAN BUS Interface (SCBI) documentation.
+CAN addresses are taken from SOREL CAN BUS Interface (SCBI) documentation.
 
 See image for wiring.
