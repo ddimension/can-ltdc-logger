@@ -1,0 +1,10 @@
+[Unit]
+Description=can-ltdc-logger-mqtt
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/can-ltdc-logger-mqtt
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
